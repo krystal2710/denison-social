@@ -47,8 +47,7 @@ class User(AbstractModel, AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(db_index=True, unique=True)
     is_active = models.BooleanField(default=True)
     is_superuser = models.BooleanField(default=False)
-    USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = ['username']
+    USERNAME_FIELD = 'username'
     posts_liked = models.ManyToManyField(
        "core_post.Post",
        related_name="liked_by"
