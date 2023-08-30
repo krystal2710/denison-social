@@ -29,7 +29,7 @@ class PostViewSet(AbstractViewSet):
     def like(self, request, *args, **kwargs):
         post = self.get_object()
         user = self.request.user
-        user.like(post)
+        user.like_post(post)
         serializer = self.serializer_class(post)
         return Response(serializer.data, status=status.HTTP_200_OK)
     
@@ -37,6 +37,6 @@ class PostViewSet(AbstractViewSet):
     def remove_like(self, request, *args, **kwargs):
         post = self.get_object()
         user = self.request.user
-        user.remove_like(post)
+        user.remove_like_post(post)
         serializer = self.serializer_class(post)
         return Response(serializer.data,status=status.HTTP_200_OK)
