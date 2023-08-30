@@ -61,6 +61,11 @@ class User(AbstractModel, AbstractBaseUser, PermissionsMixin):
        related_name="liked_by"
     )
     
+    comments_liked = models.ManyToManyField(
+        "core_comment.Comment",
+        related_name="commented_by"
+    )
+    
     objects = UserManager()
 
     def __str__(self):
