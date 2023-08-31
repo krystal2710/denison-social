@@ -52,13 +52,16 @@ function Post(props) {
         <Card.Body>
           <Card.Title className="d-flex flex-row justify-content-between">
             <div className="d-flex flex-row">
-              <Image
-                src={post.author.avatar}
-                roundedCircle
-                width={48}
-                height={48}
-                className="me-2 border border-primary border-2"
-              />
+              <Link to={`/profile/${post.author.id}/`}>
+                <Image
+                  src={post.author.avatar}
+                  roundedCircle
+                  width={48}
+                  height={48}
+                  className="me-2 border border-danger border-2"
+                />
+              </Link>
+              
               <div className="d-flex flex-column justify-content-start align-self-center mt-2">
                 <p className="fs-6 m-0">{post.author.name}</p>
                 <p className="fs-6 fw-lighter">
@@ -66,7 +69,7 @@ function Post(props) {
                 </p>
               </div>
             </div>
-            {user.name === post.author.name && (
+            {user.id === post.author.id && (
               <div>
                 <Dropdown>
                   <Dropdown.Toggle as={MoreToggleIcon}></Dropdown.Toggle>

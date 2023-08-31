@@ -73,7 +73,7 @@ function LoginForm() {
 
       <div className="text-content text-danger">{error && <p>{error}</p>}</div>
 
-      <Button variant="primary" type="submit">
+      <Button style={{backgroundColor: "#EEA900"}} variant="outline-light" type="submit">
         Submit
       </Button>
     </Form>

@@ -13,7 +13,7 @@ class PostViewSet(AbstractViewSet):
     filterset_fields = ['author__public_id']
 
     def get_queryset(self):
-        return Post.objects.all()
+        return Post.objects.all().order_by("-updated")
     
     def get_object(self):
         obj = Post.objects.get_object_by_public_id(self.kwargs['pk'])

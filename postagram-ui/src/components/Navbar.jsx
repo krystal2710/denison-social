@@ -9,10 +9,10 @@ function NavigationBar() {
   const user = getUser();
     
     return (
-      <Navbar bg="primary" variant="dark">
+      <Navbar style={{backgroundColor: "#C8102E"}} variant="dark">
         <Container>
           <Navbar.Brand className="fw-bold" as={Link} to={`/`}>
-            Postagram
+            Denison Social
           </Navbar.Brand>
           <Navbar.Collapse
             className="justify-content-end">
@@ -24,6 +24,7 @@ function NavigationBar() {
                     roundedCircle
                     width={36}
                     height={36}
+                    className="border border-danger border-2"
                   />
                 }
               >

@@ -55,7 +55,7 @@ function Comment(props) {
               roundedCircle
               width={48}
               height={48}
-              className="me-2 border border-primary border-2"
+              className="me-2 border border-warning border-3"
             />
             <div className="d-flex flex-column justify-content-start align-self-center mt-2">
               <p className="fs-6 m-0">{comment.author.name}</p>

@@ -15,7 +15,7 @@ function UpdateProfileForm(props) {
   const [error, setError] = useState(null);
   const userActions = useUserActions();
 
-  const [avatar, setAvatar] = useState();
+  const [avatar, setAvatar] = useState(profile.avatar);
 
   const { setToaster } = useContext(Context);
 
@@ -45,7 +45,7 @@ function UpdateProfileForm(props) {
       }
     });
 
-    if (avatar) {
+    if (profile.avatar != form.avatar) {
       formData.append("avatar", avatar);
     }
 
@@ -77,11 +77,11 @@ function UpdateProfileForm(props) {
       <Form.Group className="mb-3 d-flex flex-column">
         <Form.Label className="text-center">Avatar</Form.Label>
         <Image
-          src={form.avatar}
+          src={avatar}
           roundedCircle
           width={120}
           height={120}
-          className="m-2 border border-primary border-2 align-self-center"
+          className="m-2 border border-danger border-3 align-self-center"
         />
         <Form.Control
           onChange={(e) => setAvatar(e.target.files[0])}
@@ -132,7 +132,7 @@ function UpdateProfileForm(props) {
 
       <div className="text-content text-danger">{error && <p>{error}</p>}</div>
 
-      <Button variant="primary" type="submit">
+      <Button style={{backgroundColor: "#EEA900"}} variant="outline-light" type="submit">
         Save changes
       </Button>
     </Form>

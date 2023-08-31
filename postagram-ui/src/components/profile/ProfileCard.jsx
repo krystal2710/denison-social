@@ -18,11 +18,11 @@ function ProfileCard(props) {
           roundedCircle
           width={48}
           height={48}
-          className="my-3 border border-primary border-2"
+          className="my-3 border border-danger border-2"
         />
         <Card.Body>
           <Card.Title className="fs-6">{user.name}</Card.Title>
-          <Button variant="primary" onClick={handleNavigateToProfile}>
+          <Button style={{backgroundColor: "#EEA900"}} variant="outline-light" onClick={handleNavigateToProfile}>
             See profile
           </Button>
         </Card.Body>

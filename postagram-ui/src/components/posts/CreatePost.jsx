@@ -59,7 +59,7 @@ function CreatePost(props) {
     <>
       <Form.Group className="my-3 w-75">
         <Form.Control
-          className="py-2 rounded-pill border-primary text-primary"
+          className="py-2 rounded-pill border-warning text-primary"
           type="text"
           placeholder="Write a post"
           onClick={handleShow}

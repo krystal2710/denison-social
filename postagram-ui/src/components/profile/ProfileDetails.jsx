@@ -19,7 +19,7 @@ function ProfileDetails(props) {
           roundedCircle
           width={120}
           height={120}
-          className="me-5 border border-primary border-2"
+          className="me-5 border border-danger border-3"
         />
         <div className="d-flex flex-column justify-content-start align-self-center mt-2">
           <p className="fs-4 m-0">{user.name}</p>
@@ -29,9 +29,10 @@ function ProfileDetails(props) {
           </p>
           {user.id === getUser().id && (
             <Button
-              variant="primary"
               size="sm"
-              className="w-25"
+              className="w-60"
+              style={{backgroundColor: "#EEA900"}} 
+              variant="outline-light"
               onClick={() => navigate(`/profile/${user.id}/edit/`)}
             >
               Edit

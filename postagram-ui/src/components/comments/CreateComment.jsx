@@ -68,7 +68,7 @@ function CreateComment(props) {
       />
       <Form.Group className="m-3 w-75">
         <Form.Control
-          className="py-2 rounded-pill border-primary"
+          className="py-2 rounded-pill border-danger"
           type="text"
           placeholder="Write a comment"
           value={form.body}
@@ -78,7 +78,7 @@ function CreateComment(props) {
       </Form.Group>
       <div className="m-auto">
         <Button
-          variant="primary"
+          style={{backgroundColor: "#EEA900"}} variant="outline-light" 
           onClick={handleSubmit}
           disabled={form.body === undefined}
           size="small"
