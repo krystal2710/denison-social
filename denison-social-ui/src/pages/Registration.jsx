@@ -8,7 +8,7 @@ function Registration() {
         <div className="row">
             <div className="col-md-6 d-flex align-items-center">
                 <div className="content text-center px-4">
-                <h1 className="text-primary">
+                <h1 style={{color: "#C8102E"}}>
                     Welcome to Denison Social!
                 </h1>
                 <p className="content">
