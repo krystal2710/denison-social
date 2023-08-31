@@ -1,0 +1,15 @@
+name: Build, Test and Deploy Postagram backend
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Building Docker containers
+      run: |
+        docker-compose up --detach --build
+        docker-compose logs
