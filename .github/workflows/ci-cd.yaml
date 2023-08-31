@@ -8,7 +8,6 @@ jobs:
   deploy:
     name: Deploying on EC2 via SSH
     if: ${{ github.event_name == 'push' }}
-    needs: [build]
     runs-on: ubuntu-latest
     steps:
     - name: Deploying Application on EC2
