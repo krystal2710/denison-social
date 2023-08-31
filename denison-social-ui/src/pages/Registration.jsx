@@ -9,7 +9,7 @@ function Registration() {
             <div className="col-md-6 d-flex align-items-center">
                 <div className="content text-center px-4">
                 <h1 className="text-primary">
-                    Welcome to Postagram!
+                    Welcome to Denison Social!
                 </h1>
                 <p className="content">
                     This is a new social media site that will

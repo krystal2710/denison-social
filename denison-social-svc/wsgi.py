@@ -1,5 +1,5 @@
 """
-WSGI config for postagram_svc project.
+WSGI config for denison-social-svc project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'postagram_svc.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'denison-social-svc.settings')
 
 application = get_wsgi_application()
