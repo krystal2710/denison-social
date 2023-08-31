@@ -9,6 +9,8 @@ https://docs.djangoproject.com/en/4.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
+from dotenv import load_dotenv
+load_dotenv()
 
 from pathlib import Path
 
@@ -20,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-5f5g54-8we0q&m%u)1w&nffwtb^g(nldb$+d0zllar&w2qdz_)'
+SECRET_KEY = os.environ.get("SECRET_KEY", default="qkl+xdr8aimpf-&x(mi7)dwt^-q77aji#j*d#02-5usa32r9!y")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -86,11 +88,11 @@ WSGI_APPLICATION = 'denison-social-svc.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'coredb',
-        'USER': 'krystally',
-        'PASSWORD': '8403',
-        'HOST': 'localhost',
-        'PORT': '5432',
+        'NAME': os.getenv("DATABASE_NAME","coredb"),
+        'USER': os.getenv("DATABASE_USER","krystally"),
+        'PASSWORD': os.getenv("DATABASE_PASSWORD","8403"),
+        'HOST': os.environ.get("DATABASE_HOST","localhost"),
+        'PORT': os.getenv("DATABASE_PORT", "5432"),
     }
 }
 
