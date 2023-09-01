@@ -33,7 +33,7 @@ else
 fi
 
 # If there are new changes, we pull these changes.
-if [ "$HEAD_HASH" == "$UPSTREAM_HASH" ]
+if [ "$HEAD_HASH" != "$UPSTREAM_HASH" ]
 then
 	  git pull origin main;
 	  # We can now build and start the containers
