@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Deploying Application on EC2
-      uses: appleboy/ssh-action@v.0.1.3
+      uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.SSH_EC2_IP }}
         username: ${{ secrets.SSH_EC2_USER }}
