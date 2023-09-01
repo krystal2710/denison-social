@@ -28,8 +28,13 @@ fi
 
 git pull origin main;
 
+echo -e "Succesfully pull new changes"
+
+
 # We can now build and start the containers
 
-docker compose up --detach --build
+docker-compose up -d --build
+
+echo -e "Succesfully run docker-compose"
 
 exit 0;
