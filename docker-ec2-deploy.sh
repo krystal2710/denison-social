@@ -2,6 +2,8 @@
 
 TARGET='main'
 
+docker compose up --detach --build
+
 ACTION_COLOR='\033[1;90m'
 NO_COLOR='\033[0m'
 
