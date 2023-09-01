@@ -11,13 +11,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Deploying Application on EC2
-      uses: appleboy/ssh-action@master
+      uses: appleboy/ssh-action@v.0.1.3
       with:
         host: ${{ secrets.SSH_EC2_IP }}
         username: ${{ secrets.SSH_EC2_USER }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         passphrase: ${{ secrets.SSH_PASSPHRASE }}
         script: |
-          ls
+          touch success.py
           cd denison-social
           ./docker-ec2-deploy.sh
