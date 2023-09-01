@@ -35,8 +35,8 @@ echo -e "Succesfully pull new changes"
 
 docker compose up -d --build
 
-echo -e "Succesfully run docker-compose"
-
 docker container ls
+
+echo -e "Succesfully run docker-compose"
 
 exit 0;
