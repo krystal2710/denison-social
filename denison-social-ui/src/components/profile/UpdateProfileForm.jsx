@@ -45,7 +45,7 @@ function UpdateProfileForm(props) {
       }
     });
 
-    if (profile.avatar != form.avatar) {
+    if (profile.avatar !== form.avatar) {
       formData.append("avatar", avatar);
     }
 
