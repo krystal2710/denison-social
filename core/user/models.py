@@ -52,7 +52,7 @@ class User(AbstractModel, AbstractBaseUser, PermissionsMixin):
     is_active = models.BooleanField(default=True)
     is_superuser = models.BooleanField(default=False)
 
-    bio = models.TextField(null=True)
+    bio = models.TextField(null=True, blank=True)
     avatar = models.ImageField(null=True, blank=True, upload_to=user_directory_path)
 
     USERNAME_FIELD = 'username'
