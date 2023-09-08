@@ -38,6 +38,7 @@ then
 	  git pull origin main;
 	  # We can now build and start the containers
 	  echo -e "Succesfully pull new changes"
+	  python3 -r requirements.txt
 	  docker-compose up -d --build
 	  echo -e "Succesfully run docker-compose"
 fi
