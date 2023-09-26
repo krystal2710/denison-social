@@ -13,7 +13,8 @@ function Login() {
                 <p className="content">
                     Login now and start enjoying! <br />
                     Or if you don't have an account, please{" "}
-                    <Link to="/register/">register</Link>.
+                    <Link to="/register/">register</Link>. <br />
+                    For a quick look at the web, please log in with username: krystally and password: 123456789.
                 </p>
                 </div>
             </div>
